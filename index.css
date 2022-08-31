@@ -140,9 +140,15 @@ a.logo {
   background-color: white;
 }
 
-a.logo.github { --icon: url("./assets/ionicons/logo-github.svg"); }
+.fa-facebook {
+  color:#24a8fa
+}
 
-a.logo.youtube { --icon: url("./assets/ionicons/logo-youtube.svg"); }
+.fa-youtube {
+  color:red;
+}
+
+a.logo.github { --icon: url("./assets/ionicons/logo-github.svg"); }
 
 a.logo.nijigen {
   position: relative;
