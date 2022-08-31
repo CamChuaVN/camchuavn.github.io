@@ -150,6 +150,33 @@ a.logo {
 
 a.logo.github { --icon: url("./assets/ionicons/logo-github.svg"); }
 
+.logo {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--logo-color);
+  border-radius: 100%;
+  order: 0;
+  flex: 0 0 auto;
+  transition: 0.2s linear border;
+  background-color: transparent;
+}
+
+.logo::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0;
+  width: 100%;
+  height: 100%;
+  mask-image: url("./assets/logo.svg");
+  mask-size: cover;
+  -webkit-mask-image: url("./assets/logo.svg");
+  -webkit-mask-size: cover;
+  background-color: var(--logo-color);
+  border-radius: 100%;
+  transition: 0.2s linear background-color;
+}
+
 a.logo.nijigen {
   position: relative;
   width: 30px;
