@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Nijigen Vtuber Project</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+  <meta property="og:image" content="/assets/logo.svg">
+  <meta property="og:image:alt" content="Welcome to Nijigen Vtuber Project!">
+  <meta property="og:site_name" content="Nijigen Vtuber Project">
+  <meta property="og:type" content="object">
+  <meta property="og:title" content="Nijigen Vtuber Project">
+  <meta property="og:url" content="/">
+  <meta property="og:description" content="Welcome to Nijigen Vtuber Project!">
+
+  <link rel='icon' type='image/svg+xml' href='/assets/logo.svg' size='any'>
+  <link rel='stylesheet' type='text/css' media='screen' href='index.css'>
+  <style>
+    body {
+      --logo-color: white;
+    }
+  </style>
+  <script src='index.js'></script>
+</head>
+
+<body>
+  <x-include include="./includes/header.html"></x-include>
+  <div section full style="
+    background:
+        linear-gradient(#0000003f, #0000003f),
+        url('/assets/home/thumb0.png');
+    background-size: auto;
+    color: white
+    ">
+    <h1 diagonal style="margin-top: 50vh;">Dự án <span style="color:deeppink" underlined>Idol Vtuber</span> của tương lai</h1>
+  </div>
+  <div section style="
+    background: linear-gradient(#0000007f, #0000007f), url('/assets/home/thumb2.jpg');
+    background-size: cover;
+    color: white;
+    text-align: left;
+    ">
+    <h1>Akatsuki Ban Mai</h1>
+    <h3>Uwaaaaaaa ụm bòa</h3>
+    <p>Social:
+      <br><a href="https://www.facebook.com/akatsukibanmai">Fanpage</a>
+      <br><a href="https://www.youtube.com/channel/UCYxDbNevCyirkU2T00gb68A">Youtube</a>
+    </p>
+  </div>
+  <div section style="
+    background: linear-gradient(#0000007f, #0000007f), url('/assets/home/thumb1.png');
+    background-size: cover;
+    color: white;
+    text-align: right;
+    ">
+    <h1 style="width: 100%;">Hibiki Duca</h1>
+    <h3 style="width: 100%;">The god of ngố</h3>
+    <p>Thế là đủ descrpition rồi =))</p>
+    <p>Social:
+      <br><a href="https://www.facebook.com/hibikiduca">Fanpage</a>
+      <br><a href="https://www.youtube.com/channel/UC5RSxmHP5c4pU9Og1Pxx4wgs">Youtube</a>
+      <a class="logo youtube" href="/"></a>
+    </p>
+  </div>
+  <x-include include="/includes/footer.html"></x-include>
+</body>
+</html>

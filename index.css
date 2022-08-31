@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Merriweather+Sans:wght@300;400;600&display=swap');
+
+html, body {
+  position: relative;
+  margin: 0;
+}
+
+body {
+  font-family: 'Merriweather Sans', 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+header {
+  position: absolute;
+  top: 0; left: 0;
+  width: calc(100% - 48px);
+  display: flex;
+  padding: 12px 24px;
+  z-index: 1000;
+  transition: 0.2s linear background-color;
+}
+
+header:hover {
+  background-color: #000000af;
+  --logo-color: white;
+}
+
+header > * {
+  align-self: center;
+}
+
+header > h1 {
+  font-size: 18px;
+  margin-block: 0;
+  margin-left: 12px;
+  flex-basis: 0;
+  flex-grow: 1;
+}
+
+header > a {
+  text-decoration: none;
+  margin-left: 12px;
+}
+
+div[section] {
+  position: relative;
+  overflow: auto;
+}
+
+h1, h2, h3, h4, h5, h6 { width: fit-content; }
+h1 { font-size: 42px; }
+h2 { font-size: 32px; }
+h3 { font-size: 24px; }
+h4 {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+[diagonal] {
+  --diagonal-bg: #000000af;
+  --diagonal-fg: #222222af;
+  background-color: var(--diagonal-bg);
+  background: repeating-linear-gradient(-45deg, var(--diagonal-fg), var(--diagonal-fg) 5px, var(--diagonal-bg) 5px, var(--diagonal-bg) 25px);
+}
+
+h1[diagonal] { padding: 18px; }
+
+a {
+  color: unset;
+}
+
+header > * {
+  color: var(--logo-color);
+  transition: 0.2s linear color;
+}
+
+code {
+  font-family: 'Inconsolata', 'Consolas', monospace;
+  font-size: 16px;
+  background-color: #00000010;
+  padding: 12px 15px;
+  border-radius: 8px;
+  user-select: all;
+}
+
+[underlined] {
+  text-decoration: underline;
+}
+
+div.footer-top, div.footer-mid, div.footer-bot {
+  display: flex;
+}
+
+div.footer-mid, div.footer-bot {
+  margin-top: 24px;
+}
+
+div.footer-top > h1 {
+  font-size: 18px;
+  align-self: center;
+  margin-block: 0;
+  margin-left: 12px;
+  flex-basis: 0;
+  flex-grow: 1;
+}
+
+div.footer-mid {
+  flex-grow: 4;
+  flex-wrap: wrap;
+}
+
+div.footer-mid > div.col {
+  flex: 1;
+  flex-basis: 21%;
+}
+
+div.footer-mid > div.col > * {
+  display: block;
+  text-decoration: none;
+}
+
+div.footer-mid > div.col > h1 {
+  font-size: 14px;
+}
+
+div.footer-bot {
+  color: #afafaf;
+}
+
+a.logo {
+  width: 32px;
+  height: 32px;
+  font-size: 0;
+  mask-image: var(--icon);
+  mask-size: cover;
+  -webkit-mask-image: var(--icon);
+  -webkit-mask-size: cover;
+  background-color: white;
+}
+
+a.logo.github { --icon: url("./assets/ionicons/logo-github.svg"); }
+
+a.logo.youtube { --icon: url("./assets/ionicons/logo-youtube.svg"); }
+
+a.logo.nijigen {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--logo-color);
+  border-radius: 100%;
+  order: 0;
+  flex: 0 0 auto;
+  transition: 0.2s linear border;
+  background-color: transparent;
+}
+
+a.logo.nijigen::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0;
+  width: 100%;
+  height: 100%;
+  mask-image: url("./assets/logo.svg");
+  mask-size: cover;
+  -webkit-mask-image: url("./assets/logo.svg");
+  -webkit-mask-size: cover;
+  background-color: var(--logo-color);
+  border-radius: 100%;
+  transition: 0.2s linear background-color;
+}
+
+@media screen and (min-width: 768px) {
+  div[section] {
+    padding: 36px 120px;
+  }
+
+  div[section][full] {
+    min-height: calc(100vh - 72px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  div[section] {
+    padding: 18px 32px;
+  }
+
+  div[section][full] {
+    min-height: calc(100vh - 36px);
+  }
+
+  div.footer-mid > div.col {
+    flex-basis: 50%;
+  }
+}
