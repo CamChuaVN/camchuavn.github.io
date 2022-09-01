@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Akatsuki Ban Mai</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+  <meta property="og:image" content="/assets/logo.svg">
+  <meta property="og:image:alt" content="Akatsuki Ban Mai">
+  <meta property="og:site_name" content="Nijigen Vtuber Project">
+  <meta property="og:type" content="object">
+  <meta property="og:title" content="Akatsuki Ban Mai | Nijigen Vtuber Project">
+  <meta property="og:url" content="/projects/banmai.html">
+  <meta property="og:description" content="What?">
+
+  <link rel='icon' type='image/svg+xml' href='/assets/logo.svg' size='any'>
+  <link rel='stylesheet' type='text/css' media='screen' href='/index.css'>
+  <style>
+    body {
+      --logo-color: black;
+    }
+
+    div.bg-decor {
+      position: absolute;
+      width: 160px; height: 160px;
+      box-shadow: 0 0 16px #0000007f;
+      border-radius: 16px;
+      bottom: 128px;
+      transform: scale(3);
+      backdrop-filter: blur(2px);
+      border: 2px solid #ffffff3f;
+    }
+    div.bg-decor.e0 { background-color: #d6eca5af; rotate: 15deg; right: 72px; }
+    div.bg-decor.e1 { background-color: #aaffe3af; rotate: 30deg; right: 48px; }
+    div.bg-decor.e2 { background-color: #f7e8a6af; rotate: 45deg; right: 24px; }
+
+    @media screen and (max-width: 768px) {
+      .clonecmd { display: none; }
+    }
+  </style>
+  <script src='/index.js'></script>
+</head>
+<body>
+<x-include include="/includes/header.html"></x-include>
+<div section full style="background: #fff2ec; overflow: hidden;">
+  <div class="bg-decor e0"></div>
+  <div class="bg-decor e1"></div>
+  <div class="bg-decor e2"></div>
+  <h1 style="margin-top: 30vh; position: absolute;">Akatsuki Ban Mai</h1>
+  <h4 style="margin-top: calc(30vh + 48px + 12px); position: absolute;">Con bò vàng uwaaaaaaaaaaaaa</h4>
+  <code class="clonecmd" style="margin-top: calc(30vh + 48px + 48px); position: absolute;">https://www.youtube.com/channel/UCYxDbNevCyirkU2T00gb68A</code>
+</div>
+<x-include include="/includes/footer.html"></x-include>
+</body>
+</html>

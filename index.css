@@ -141,11 +141,18 @@ a.logo {
 }
 
 .fa-facebook {
-  color:#24a8fa
+  color:#24a8fa;
+  margin-right: .5rem;
 }
 
 .fa-youtube {
   color:red;
+  margin-right: .5rem;
+}
+
+.fa-twitter {
+  color: #1DA1F2;
+  margin-right: .5rem;
 }
 
 a.logo.github { --icon: url("./assets/ionicons/logo-github.svg"); }
