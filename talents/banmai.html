@@ -26,18 +26,14 @@
       width: 240px; height: 240px;
       box-shadow: 0 0 16px #0000007f;
       border-radius: 16px;
-      bottom: 128px;
+      bottom: 96px;
       transform: scale(2);
       backdrop-filter: blur(2px);
-      border: 2px solid #ffffff3f;
     }
-    div.bg-decor.e0 { background-color: #d6eca5af; background-image: url("/assets/avatar/banmai.webp"); background-size: cover; background-position: center; rotate: 15deg; right: 72px; }
-
-    @media screen and (max-width: 768px) {
-      .clonecmd { display: none; }
-    }
+    div.bg-decor.e0 { background-color: #d6eca5af; background-image: url("/assets/avatar/banmai.jpg"); background-size: cover; rotate: 15deg; right: 72px; }
   </style>
   <script src='/index.js'></script>
+  <script src="https://kit.fontawesome.com/589564cef6.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <x-include include="/includes/header.html"></x-include>
@@ -63,7 +59,9 @@
   <div class="bg-decor e0"></div>
   <h1 style="margin-top: 30vh; position: absolute;">Akatsuki Ban Mai</h1>
   <h4 style="margin-top: calc(30vh + 48px + 12px); position: absolute;">Con bò vàng uwaaaaaaaaaaaaa</h4>
-  <code class="clonecmd" style="margin-top: calc(30vh + 48px + 48px); position: absolute;">https://www.youtube.com/channel/UCYxDbNevCyirkU2T00gb68A</code>
+  <a style="margin-top: calc(30vh + 48px + 48px); margin-right: 12px;" href="https://twitter.com/akatsukibanmai" class="icon-button twitter"><i class="fa-brands fa-twitter"></i><span></span></a>
+  <a style="margin-top: calc(30vh + 48px + 48px); margin-right: 12px;" href="https://www.facebook.com/akatsukibanmai" class="icon-button facebook"><i class="fa-brands fa-facebook"></i><span></span></a>
+  <a style="margin-top: calc(30vh + 48px + 48px); position: absolute;" href="https://www.youtube.com/channel/UCYxDbNevCyirkU2T00gb68A" class="icon-button youtube"><i class="fa-brands fa-youtube"></i><span></span></a>
 </div>
 <x-include include="/includes/footer.html"></x-include>
 </body>
