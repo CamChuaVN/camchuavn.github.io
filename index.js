@@ -15,19 +15,12 @@ window.customElements.define("x-include", class Include extends HTMLElement {
 });
 
 setTimeout(() => {
-  let id = null;
-  const elem = document.getElementById("loader");
-  const load1 = document.getElementById("loader_elem")
-  let pos = 0;
-  clearInterval(id);
-  id = setInterval(frame, 0.5);
-  function frame() {
-    if (pos === 800) {
-      clearInterval(id);
-      elem.parentNode.removeChild(elem)
-    } else {
-      pos += 8;
-      elem.style.top = pos + "px";
-    }
-  }
-}, 1200);
+  const elem = document.getElementById("preloader");
+  var seconds = 1500 / 1000;
+  elem.style.transition = "opacity " + seconds + "s ease";
+
+  elem.style.opacity = 0;
+  setTimeout(function() {
+    elem.parentNode.removeChild(elem);
+  }, 1500);
+}, 900);

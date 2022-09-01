@@ -27,12 +27,23 @@
 
 <body>
   <x-include include="./includes/header.html"></x-include>
-<!--  Loading Screen -->
-  <div class="loader" id="loader">
-    <span class="loader__element"></span>
-    <span class="loader__element"></span>
-    <span class="loader__element"></span>
-  </div>
+  <div class="preloader" id="preloader"><!-- start preloader -->
+    <div class="preloader-container">
+      <svg version="1.1" id="L5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve">
+                <circle fill="#675cda" stroke="none" cx="6" cy="50" r="6">
+                    <animateTransform attributeName="transform" dur="1s" type="translate" values="0 15 ; 0 -15; 0 15" repeatCount="indefinite" begin="0.1" />
+                </circle>
+        <circle fill="#675cda" stroke="none" cx="30" cy="50" r="6">
+                    <animateTransform attributeName="transform" dur="1s" type="translate" values="0 10 ; 0 -10; 0 10" repeatCount="indefinite" begin="0.2" />
+                </circle>
+        <circle fill="#675cda" stroke="none" cx="54" cy="50" r="6">
+                    <animateTransform attributeName="transform" dur="1s" type="translate" values="0 5 ; 0 -5; 0 5" repeatCount="indefinite" begin="0.3" />
+                </circle>
+            </svg>
+      <span>loading</span>
+    </div>
+  </div><!-- end preloader -->
+
   <div section full style="
     background:
         linear-gradient(#0000003f, #0000003f),
@@ -54,8 +65,8 @@
       <br>Vtuber thuộc NIJIGEN Project. Cùng khám phá với Ban Mai nhé!
     </h3>
     <p>Social:
-      <br><i class="fa-brands fa-facebook"></i> <a href="https://www.facebook.com/akatsukibanmai">Fanpage</a>
-      <br><i class="fa-brands fa-youtube"></i> <a href="https://www.youtube.com/channel/UCYxDbNevCyirkU2T00gb68A">Youtube</a>
+      <br><a href="https://www.facebook.com/akatsukibanmai"><i class="fa-brands fa-facebook"></i> Fanpage</a>
+      <br><a href="https://www.youtube.com/channel/UCYxDbNevCyirkU2T00gb68A"><i class="fa-brands fa-youtube"></i> Youtube</a>
     </p>
   </div>
   <div section style="
@@ -67,8 +78,8 @@
     <h1 style="width: 100%;">Hibiki Du Ca</h1>
     <h3 style="width: 100%;">Chào người đẹp!! Ta là Du Ca <br>một vị thần Vtuber đến từ NijiGen Vtuber Project. Đến với ta nào!!</h3>
     <p>Social:
-      <br><i class="fa-brands fa-facebook"></i> <a href="https://www.facebook.com/hibikiduca">Fanpage</a>
-      <br><i class="fa-brands fa-youtube"></i> <a href="https://www.youtube.com/channel/UC5RSxmHP5c4pU9Og1Pxx4wg">Youtube</a>
+      <br><a href="https://www.facebook.com/hibikiduca"><i class="fa-brands fa-facebook"></i> Fanpage</a>
+      <br><a href="https://www.youtube.com/channel/UC5RSxmHP5c4pU9Og1Pxx4wg"><i class="fa-brands fa-youtube"></i> Youtube</a>
     </p>
   </div>
   <x-include include="/includes/footer.html"></x-include>
