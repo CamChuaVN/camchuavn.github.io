@@ -44,6 +44,10 @@ header > a {
   margin-left: 12px;
 }
 
+footer > * {
+  z-index: 9999;
+}
+
 div[section] {
   position: relative;
   overflow: auto;

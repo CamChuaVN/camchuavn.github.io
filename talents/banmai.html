@@ -21,6 +21,23 @@
       --logo-color: black;
     }
 
+    body:before {
+      content: ' ';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: linear-gradient(45deg, #e91e63, #e91e63 50%, #ffc107 50%, #ffc107);
+    }
+
+    body:after {
+      content: ' ';
+      position: absolute;
+      top: -20px; left: 0;
+      width: 100%; height: 100%;
+      background: linear-gradient(160deg, #03a9f4, #03a9f4 50%, transparent 50%, transparent);
+      animation: animate 5s ease-in-out infinite;
+    }
+
     div.bg-decor {
       position: absolute;
       width: 240px; height: 240px;
@@ -30,7 +47,19 @@
       transform: scale(2);
       backdrop-filter: blur(2px);
     }
-    div.bg-decor.e0 { background-color: #d6eca5af; background-image: url("/assets/avatar/banmai.jpg"); background-size: cover; rotate: 15deg; right: 72px; }
+    div.bg-decor.e0 { background-color: #d6eca5af; background-image: url("/assets/avatar/banmai.jpg"); background-size: cover; rotate: 13deg; right: 72px; z-index: 1; }
+
+    @keyframes animate {
+      0% {
+        transform: translateY(15px);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
+      100% {
+        transform: translateY(15px);
+      }
+    }
   </style>
   <script src='/index.js'></script>
   <script src="https://kit.fontawesome.com/589564cef6.js" crossorigin="anonymous"></script>
@@ -55,9 +84,9 @@
   </div>
 </div>
 <!-- end preloader -->
-<div section full style="background: #fff2ec; overflow: hidden;">
+<div section full style="overflow: hidden; z-index: 1;">
   <div class="bg-decor e0"></div>
-  <h1 style="margin-top: 30vh; position: absolute;">Akatsuki Ban Mai</h1>
+  <h1 style="margin-top: 30vh; position: absolute; z-index: 1;">Akatsuki Ban Mai</h1>
   <h4 style="margin-top: calc(30vh + 48px + 12px); position: absolute;">Con bò vàng uwaaaaaaaaaaaaa</h4>
   <a style="margin-top: calc(30vh + 48px + 48px); margin-right: 12px;" href="https://twitter.com/akatsukibanmai" class="icon-button twitter"><i class="fa-brands fa-twitter"></i><span></span></a>
   <a style="margin-top: calc(30vh + 48px + 48px); margin-right: 12px;" href="https://www.facebook.com/akatsukibanmai" class="icon-button facebook"><i class="fa-brands fa-facebook"></i><span></span></a>
