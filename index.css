@@ -317,6 +317,14 @@ a.logo.nijigen::before {
     padding: 18px 32px;
   }
 
+  #character {
+    display: none;
+  }
+
+  #character_explain {
+    display: none;
+  }
+
   div[section][full] {
     min-height: calc(100vh - 36px);
   }
