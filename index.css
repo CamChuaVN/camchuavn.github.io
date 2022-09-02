@@ -237,6 +237,7 @@ a.logo.nijigen::before {
   -ms-user-select: none;
   user-select: none;
   width: 3.6rem;
+  z-index: 1000;
 }
 
 /* Circle */
