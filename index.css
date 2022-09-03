@@ -159,6 +159,11 @@ a.logo {
   margin-right: .5rem;
 }
 
+.fa-twitch {
+  color: #9146FF;
+  margin-right: .5rem;
+}
+
 a.logo.github { --icon: url("./assets/ionicons/logo-github.svg"); }
 
 .icon {
