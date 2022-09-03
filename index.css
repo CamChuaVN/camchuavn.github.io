@@ -161,6 +161,12 @@ a.logo {
 
 a.logo.github { --icon: url("./assets/ionicons/logo-github.svg"); }
 
+.icon {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
 .logo {
   position: relative;
   width: 30px;
