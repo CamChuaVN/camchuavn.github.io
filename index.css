@@ -168,6 +168,10 @@ a.logo {
   margin-right: .5rem;
 }
 
+.fa-up-right-from-square {
+  margin-left: .5em;
+}
+
 a.logo.github { --icon: url("./assets/ionicons/logo-github.svg"); }
 
 .icon {
