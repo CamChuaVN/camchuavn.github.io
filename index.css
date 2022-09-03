@@ -164,6 +164,10 @@ a.logo {
   margin-right: .5rem;
 }
 
+.fa-envelope {
+  margin-right: .5rem;
+}
+
 a.logo.github { --icon: url("./assets/ionicons/logo-github.svg"); }
 
 .icon {
