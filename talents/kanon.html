@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Misora Kanon</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+  <meta property="og:image" content="/assets/avatar/kanon.jpg">
+  <meta property="og:image:alt" content="Misora Kanon">
+  <meta property="og:site_name" content="Nijigen Vtuber Project">
+  <meta property="og:type" content="object">
+  <meta property="og:title" content="Misora Kanon | Nijigen Vtuber Project">
+  <meta property="og:url" content="/talents/kanon.html">
+  <meta property="og:description" content="What?">
+
+  <link rel='icon' type='image/svg+xml' href='/assets/logo.svg' size='any'>
+  <link rel='stylesheet' type='text/css' media='screen' href='/index.css'>
+  <style>
+    body {
+      --logo-color: black;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    section {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    section .wave {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #8dd8f8;
+    }
+
+    section .wave span {
+      position: absolute;
+      width: 325vh;
+      height: 325vh;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -75%);
+      background: #f39cc7;
+    }
+
+    section .wave span:nth-child(1) {
+      animation: animate 5s linear infinite;
+      border-radius: 45%;
+      background: rgba(243,156,199, 1);
+    }
+
+    section .wave span:nth-child(2) {
+      animation: animate 10s linear infinite;
+      border-radius: 40%;
+      background: rgba(243,156,199, 0.5);
+    }
+
+    section .wave span:nth-child(3) {
+      animation: animate 15s linear infinite;
+      border-radius: 42.5%;
+      background: rgba(243,156,199, 0.5);
+    }
+
+    section .content {
+      position: relative;
+      z-index: 1000;
+      color: #fff;
+      font-size: 4em;
+    }
+
+    section .container {
+      position: absolute;
+      right: 20px;
+      top: 100px;
+      width: 70px; height: 70px;
+      background: #fff;
+      border-radius: 50px;
+      transition: 0.4s ease;
+    }
+
+    section .container.active {
+      height: 360px;
+    }
+
+    section .toggleBox {
+      position: absolute;
+      display: block;
+      width: 70px; height: 70px;
+      border-radius: 50px;
+    }
+
+    section .toggleBox.active .icon {
+      width: 0;
+    }
+
+    section .icon {
+      position: absolute;
+      width: 35px; height: 4px;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #161d2c;
+      border-radius: 50px;
+    }
+
+    section .icon::before, .icon::after {
+      position: absolute;
+      content: '';
+      width: 34px; height: 4px;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #161d2c;
+      border-radius: 50px;
+      transition: 0.3s;
+    }
+
+    section .icon::before {
+      top: 12px;
+    }
+
+    section .icon::after {
+      top: -8px;
+    }
+
+    section .toggleBox.active .icon::before {
+      width: 40px;
+      transform-origin: right;
+      transform: translate(-25px, 3px) rotate(45deg);
+    }
+
+    section .toggleBox.active .icon::after {
+      width: 40px;
+      transform-origin: right;
+      transform: translate(-25px, -6px) rotate(-45deg);
+    }
+
+    section .container.active .navItems {
+      visibility: visible;
+    }
+
+    section .navItems {
+      width: 100%;
+      visibility: hidden;
+    }
+
+    section .navItems li {
+      list-style: none;
+    }
+
+    section .navItems li a {
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #000;
+    }
+
+    section .navItems li a i {
+      position: relative;
+      display: block;
+      font-size: 20px;
+      padding: 25px 0;
+      width: 100%;
+      text-align: center;
+      color: #00d2ff;
+      transform: scale(0);
+    }
+
+    section .navItems li a i::after {
+      position: absolute;
+      content: '';
+      top: 50%;
+      right: 0.6em;
+      width: 0px; height: 35%;
+      transform: translateY(-50%);
+      background-color: #00d2ff;
+      border-radius: 8px 0 0 8px;
+    }
+
+    section .navItems li:hover a i::after {
+      width: 8px;
+      transition: 0.3s;
+    }
+
+    section .container.active .navItems li a i {
+      transform: scale(1.5);
+      transition: 0.4s ease;
+      transition-delay: calc(0.08s * var(--i));
+    }
+
+    section .container.active .navItems li:hover a i {
+      transition: 0.2s ease;
+      color: #f39cc7;
+    }
+
+    @keyframes animate {
+      0% {
+        transform: translate(-50%, -75%) rotate(0deg);
+      }
+      100% {
+        transform: translate(-50%, -75%) rotate(360deg);
+      }
+    }
+  </style>
+  <script src='/index.js'></script>
+  <script src="https://kit.fontawesome.com/589564cef6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<x-include include="/includes/header.html"></x-include>
+<div style="z-index: 10000" class="preloader" id="preloader">
+  <!-- start preloader -->
+  <div class="preloader-container">
+    <svg version="1.1" id="L5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve">
+                <circle fill="#675cda" stroke="none" cx="6" cy="50" r="6">
+                    <animateTransform attributeName="transform" dur="1s" type="translate" values="0 15 ; 0 -15; 0 15" repeatCount="indefinite" begin="0.1" />
+                </circle>
+      <circle fill="#675cda" stroke="none" cx="30" cy="50" r="6">
+                    <animateTransform attributeName="transform" dur="1s" type="translate" values="0 10 ; 0 -10; 0 10" repeatCount="indefinite" begin="0.2" />
+                </circle>
+      <circle fill="#675cda" stroke="none" cx="54" cy="50" r="6">
+                    <animateTransform attributeName="transform" dur="1s" type="translate" values="0 5 ; 0 -5; 0 5" repeatCount="indefinite" begin="0.3" />
+                </circle>
+            </svg>
+    <span>loading</span>
+  </div>
+</div>
+<!-- end preloader -->
+<div full style="overflow: hidden;">
+  <section>
+    <div class="wave">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="content">
+      <h2>Misora Kanon</h2>
+    </div>
+    <div class="container">
+      <a href="#" class="toggleBox">
+        <span class="icon"></span>
+      </a>
+      <ul class="navItems" style="margin-top: 70px">
+        <li><a href="https://www.facebook.com/misorakanon"><i class="fa-brands fa-facebook" style="--i: 1"></i></a></li>
+        <li><a href="https://www.youtube.com/channel/UCUI_DJ5jCR2lKwfJqc_yskg"><i class="fa-brands fa-youtube" style="--i: 2"></i></a></li>
+        <li><a href="https://twitter.com/misorakanon"><i class="fa-brands fa-twitter" style="--i: 3"></i></a></li>
+        <li><a href="https://www.twitch.tv/misorakanon"><i class="fa-brands fa-twitch" style="--i: 4"></i></a></li>
+      </ul>
+    </div>
+  </section>
+</div>
+<x-include include="/includes/footer.html"></x-include>
+<script>
+  const toggleClick = document.querySelector(".toggleBox")
+  const container = document.querySelector(".container")
+  toggleClick.addEventListener('click', () => {
+    toggleClick.classList.toggle('active')
+    container.classList.toggle('active')
+  });
+</script>
+</body>
+</html>
