@@ -72,17 +72,14 @@
       background: rgba(243,156,199, 0.5);
     }
 
-    section .content {
-      position: relative;
+    section .blog-slider {
       z-index: 1000;
-      color: #fff;
-      font-size: 4em;
     }
 
     section .container {
       position: absolute;
-      right: 20px;
-      top: 100px;
+      right: 240px;
+      top: 148px;
       width: 70px; height: 70px;
       background: #fff;
       border-radius: 50px;
@@ -201,6 +198,39 @@
       color: #f39cc7;
     }
 
+    section .blog-slider {
+      display: flex;
+      width: 95%;
+      position: relative;
+      max-width: 800px;
+      margin: auto;
+      background: linear-gradient(135deg,#85d0f2,#efd1dc,#85d0f2,#937cb5);
+      box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+      padding: 25px;
+      border-radius: 25px;
+      height: 400px;
+      transition: all .3s;
+    }
+
+    section .image {
+      margin-top: 0;
+      margin-left: -60px;
+    }
+
+    section .image img {
+      width: 96%; height: 96%;
+      border: 4px solid rgb(147,124,181);
+      border-radius: 20px;
+    }
+
+    section .content {
+      transform: translateX(25px);
+    }
+
+    section .content span {
+      font-size: 15px;
+    }
+
     @keyframes animate {
       0% {
         transform: translate(-50%, -75%) rotate(0deg);
@@ -240,8 +270,19 @@
       <span></span>
       <span></span>
     </div>
-    <div class="content">
-      <h2>Misora Kanon</h2>
+    <div class="blog-slider">
+      <div class="image">
+        <img src="/assets/avatar/kanon.jpg" alt="">
+      </div>
+      <div class="content">
+        <h3>Misora Kanon</h3>
+        <span>
+          Misora Kanon (海空花音) là nữ VTuber thành viên thuộc thế hệ<br>
+          thứ hai với tên gọi Colors Of Wishes của NIJIGEN Project cùng<br>
+          với Kisaki Thiên Trà và Natsumi Hạ Chi. Trong ba sắc màu của<br>
+          điều ước, cô đại diện cho sự Cuốn hút (Charm).
+        </span>
+      </div>
     </div>
     <div class="container">
       <a href="#" class="toggleBox">
