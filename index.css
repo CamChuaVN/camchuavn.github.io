@@ -178,6 +178,18 @@ a.logo {
 
 a.logo.github { --icon: url("./assets/ionicons/logo-github.svg"); }
 
+a.logo.youtube { --icon: url("./assets/ionicons/logo-youtube.svg"); }
+
+a.logo.twitter { --icon: url("./assets/ionicons/logo-twitter.svg"); }
+
+a.logo.facebook { --icon: url("./assets/ionicons/logo-facebook.svg"); }
+
+a.logo.twitch { --icon: url("./assets/ionicons/logo-twitch.svg"); }
+
+ion-icon {
+  pointer-events: none;
+}
+
 .icon {
   position: relative;
   width: 100px;
