@@ -309,11 +309,80 @@
         min-height: 346px;
       }
     }
+
+    .navigation {
+      position: relative;
+      width: 350px; height: 70px;
+      right: 50px;
+    }
+
+    .navigation ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .navigation ul li {
+      list-style: none;
+      margin: 0 17px;
+    }
+
+    .navigation ul li a {
+      position: relative;
+      display: block;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      width: 60px; height: 60px;
+      line-height: 75px;
+      background-image: linear-gradient(147deg, #db6269 0%, #f3bfaa 74%);
+      border-radius: 50%;
+      color: #fff;
+      transition: .5s;
+    }
+
+    .navigation ul li a .icon {
+      position: center;
+      line-height: 75px;
+      transition: 0.5s;
+      font-size: 45px;
+    }
+
+    .navigation ul li a::before {
+      content: '';
+      position: center;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border-radius: 50%;
+      background: #ffe3e0;
+      transition: .1s;
+      transform: scale(.9);
+      z-index: -1;
+    }
+
+    .navigation ul li a:hover::before {
+      transform: scale(1.1);
+      box-shadow: 0 0 15px #ffe3e0;
+    }
+
+    .navigation ul li a:hover {
+      color: #ffe3e0;
+      box-shadow: 0 0 3px #ffe3e0;
+      text-shadow: 0 0 3px #ffe3e0;
+    }
+
   </style>
   <script src='/index.js'></script>
   <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="https://kit.fontawesome.com/589564cef6.js" crossorigin="anonymous"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
 <x-include include="/includes/header.html"></x-include>
@@ -343,10 +412,32 @@
       <div class="blog-slider__content">
         <span class="blog-slider__code">Nijigen Vtuber Project</span>
         <div class="blog-slider__title">Nika Lan Linh</div>
-        <div class="blog-slider__text">Cutest things of the universe, I swear. </div>
-        <a href="https://twitter.com/nikalanlinh" class="icon-button twitter"><i class="fa-brands fa-twitter"></i><span></span></a>
-        <a href="https://www.facebook.com/nikalanlinh" class="icon-button facebook"><i class="fa-brands fa-facebook"></i><span></span></a>
-        <a href="https://www.youtube.com/channel/UCaIrY40rwEf51POKMybW-Eg" class="icon-button youtube"><i class="fa-brands fa-youtube"></i><span></span></a>
+        <div class="blog-slider__text">Nika Lan Linh (仁香ランリン) hay Lan Linh, là nữ VTuber thành viên của Gen 2.5 thuộc NIJIGEN Project cùng với người em sinh đôi của mình là Nika Linh Lan.<br> (The Cutest things of the universe, I swear.)</div>
+        <div class="navigation">
+          <ul>
+            <li class="list">
+              <a href="https://www.facebook.com/nikalanlinh">
+                <span class="icon">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="">
+                <span class="icon">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="">
+                <span class="icon">
+                  <ion-icon name="logo-youtube"></ion-icon>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
 
