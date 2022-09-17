@@ -252,10 +252,18 @@ a.logo.nijigen::before {
   transition: 0.2s linear background-color;
 }
 
-.preloader{position:fixed;left:0px;top:0px;width:100%;height:100%;z-index:9999;background:#fff;}
-.preloader .preloader-container{position:absolute;left:0;right:0;margin:auto;display:block;width:120px;text-align:center;top:50%;transform:translateY(-50%);}
+.preloader{position:fixed;left:0;top:0;width:100%;height:100%;z-index:9999;background:#fff;}
+.preloader .preloader-container {position:absolute;left:0;right:0;margin:auto;display:block;width:120px;text-align:center;top:50%;transform:translateY(-50%);}
 .preloader .preloader-container svg{width:120px;height:80px;display:inline-block;vertical-align: middle;text-align:center;padding-left:15px;}
 .preloader .preloader-container span{font-size:18px;font-weight:500;letter-spacing:2px;color:#3b474c;display:block;margin-top:-10px;}
+
+.back {
+  position: fixed;
+  left:0; top:0;
+  width:100%; height:100%;
+  z-index:0;
+  background:#fff;
+}
 
 /* Wrapper */
 .icon-button {

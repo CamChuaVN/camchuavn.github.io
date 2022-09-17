@@ -124,8 +124,20 @@
       }
 
       ul li a:hover {
+        display: none;
         transform: none;
       }
+
+      ul li a:before {
+        display: none;
+        transform: none;
+      }
+
+      ul li a:hover::before {
+        display: none;
+        transform: none;
+      }
+
     }
   </style>
   <script src='/index.js'></script>

@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css?family=Libre+Franklin:400,700&subset=latin");
+
+body {
+  min-height: 100vh;
+  display: grid;
+  grid: 100vh / 1fr;
+  place-items: center;
+}
+
+svg {
+  position: fixed;
+  top: 0;
+  left:0;
+  width: 100vw;
+  height: 100vh;
+}
