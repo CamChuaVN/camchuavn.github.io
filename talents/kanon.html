@@ -16,7 +16,13 @@
 
   <link rel='icon' type='image/svg+xml' href='/assets/logo.svg' size='any'>
   <link rel='stylesheet' type='text/css' media='screen' href='/index.css'>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+  />
   <style>
+    @font-face{font-family:'Quicksand';font-display:auto;font-style:normal;font-weight:300;src:local('Quicksand Light'),local(Quicksand-Light),url(https://fonts.gstatic.com/s/quicksand/v9/6xKodSZaM9iE8KbpRA_pgHYYT8L_.woff2) format("woff2")}@font-face{font-family:'Quicksand';font-display:auto;font-style:normal;font-weight:400;src:local('Quicksand Regular'),local(Quicksand-Regular),url(https://fonts.gstatic.com/s/quicksand/v9/6xKtdSZaM9iE8KbpRA_hK1QN.woff2) format("woff2")}@font-face{font-family:'Quicksand';font-style:normal;font-display:auto;font-weight:500;src:local('Quicksand Medium'),local(Quicksand-Medium),url(https://fonts.gstatic.com/s/quicksand/v9/6xKodSZaM9iE8KbpRA_p2HcYT8L_.woff2) format("woff2")}@font-face{font-family:'Quicksand';font-display:auto;font-style:normal;font-weight:700;src:local('Quicksand Bold'),local(Quicksand-Bold),url(https://fonts.gstatic.com/s/quicksand/v9/6xKodSZaM9iE8KbpRA_pkHEYT8L_.woff2) format("woff2")}@font-face{font-family:'Poppins';font-display:auto;font-style:normal;font-weight:300;src:local('Poppins Light'),local(Poppins-Light),url(https://fonts.gstatic.com/s/poppins/v6/pxiByp8kv8JHgFVrLDz8Z1xlFQ.woff2) format("woff2")}@font-face{font-family:'Poppins';font-style:normal;font-display:auto;font-weight:400;src:local('Poppins Regular'),local(Poppins-Regular),url(https://fonts.gstatic.com/s/poppins/v6/pxiEyp8kv8JHgFVrJJfecg.woff2) format("woff2")}@font-face{font-family:'Poppins';font-style:normal;font-display:auto;font-weight:500;src:local('Poppins Medium'),local(Poppins-Medium),url(https://fonts.gstatic.com/s/poppins/v6/pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff2) format("woff2")}@font-face{font-family:'Poppins';font-style:normal;font-display:auto;font-weight:600;src:local('Poppins SemiBold'),local(Poppins-SemiBold),url(https://fonts.gstatic.com/s/poppins/v6/pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2) format("woff2")}@font-face{font-family:'Poppins';font-style:normal;font-display:auto;font-weight:700;src:local('Poppins Bold'),local(Poppins-Bold),url(https://fonts.gstatic.com/s/poppins/v6/pxiByp8kv8JHgFVrLCz7Z1xlFQ.woff2) format("woff2")}
+
     body {
       --logo-color: black;
     }
@@ -41,7 +47,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: #8dd8f8;
+      background: #f39cc7;
     }
 
     section .wave span {
@@ -51,58 +57,55 @@
       top: 0;
       left: 50%;
       transform: translate(-50%, -75%);
-      background: #f39cc7;
+      background: #8dd8f8;
     }
 
     section .wave span:nth-child(1) {
       animation: animate 5s linear infinite;
       border-radius: 45%;
-      background: rgba(243,156,199, 1);
+      background: rgba(141, 216, 248, 1);
     }
 
     section .wave span:nth-child(2) {
       animation: animate 10s linear infinite;
       border-radius: 40%;
-      background: rgba(243,156,199, 0.5);
+      background: rgba(141, 216, 248, 0.5);
     }
 
     section .wave span:nth-child(3) {
       animation: animate 15s linear infinite;
       border-radius: 42.5%;
-      background: rgba(243,156,199, 0.5);
+      background: rgba(141, 216, 248, 0.5);
     }
 
-    section .blog-slider {
-      z-index: 1000;
-    }
-
-    section .container {
+    .container {
       position: absolute;
-      right: 240px;
+      right: 230px;
       top: 148px;
       width: 70px; height: 70px;
       background: linear-gradient(135deg,#85d0f2,#efd1dc,#937cb5);
       border-radius: 50px;
+      border: 3px solid rgba(239, 209, 220);
       transition: 0.4s ease;
       z-index: 1000;
     }
 
-    section .container.active {
+    .container.active {
       height: 360px;
     }
 
-    section .toggleBox {
+    .toggleBox {
       position: absolute;
       display: block;
       width: 70px; height: 70px;
       border-radius: 50px;
     }
 
-    section .toggleBox.active .icon {
+    .toggleBox.active .icon {
       width: 0;
     }
 
-    section .icon {
+    .icon {
       position: absolute;
       width: 35px; height: 4px;
       top: 50%; left: 50%;
@@ -111,7 +114,7 @@
       border-radius: 50px;
     }
 
-    section .icon::before, .icon::after {
+    .icon::before, .icon::after {
       position: absolute;
       content: '';
       width: 34px; height: 4px;
@@ -122,46 +125,46 @@
       transition: 0.3s;
     }
 
-    section .icon::before {
+    .icon::before {
       top: 12px;
     }
 
-    section .icon::after {
+    .icon::after {
       top: -8px;
     }
 
-    section .toggleBox.active .icon::before {
+    .toggleBox.active .icon::before {
       width: 40px;
       transform-origin: right;
       transform: translate(-25px, 3px) rotate(45deg);
     }
 
-    section .toggleBox.active .icon::after {
+    .toggleBox.active .icon::after {
       width: 40px;
       transform-origin: right;
       transform: translate(-25px, -6px) rotate(-45deg);
     }
 
-    section .container.active .navItems {
+    .container.active .navItems {
       visibility: visible;
     }
 
-    section .navItems {
+    .navItems {
       width: 100%;
       visibility: hidden;
     }
 
-    section .navItems li {
+    .navItems li {
       list-style: none;
     }
 
-    section .navItems li a {
+    .navItems li a {
       text-transform: uppercase;
       text-decoration: none;
       color: #000;
     }
 
-    section .navItems li a i {
+    .navItems li a i {
       position: relative;
       display: block;
       font-size: 20px;
@@ -172,64 +175,130 @@
       transform: scale(0);
     }
 
-    section .navItems li a i::after {
+    .navItems li a i::after {
       position: absolute;
       content: '';
       top: 50%;
       right: 0.6em;
-      width: 0px; height: 35%;
+      width: 0; height: 35%;
       transform: translateY(-50%);
       background-color: #00d2ff;
       border-radius: 8px 0 0 8px;
     }
 
-    section .navItems li:hover a i::after {
+    .navItems li:hover a i::after {
       width: 8px;
       transition: 0.3s;
     }
 
-    section .container.active .navItems li a i {
+    .container.active .navItems li a i {
       transform: scale(1.5);
-      transition: 0.4s ease;
+      transition: 0.3s ease;
       transition-delay: calc(0.08s * var(--i));
     }
 
-    section .container.active .navItems li:hover a i {
+    .container.active .navItems li:hover a i {
       transition: 0.2s ease;
       color: #f39cc7;
     }
 
-    section .blog-slider {
-      display: flex;
-      width: 95%;
-      position: relative;
-      max-width: 800px;
-      margin: auto;
-      background: linear-gradient(135deg,#85d0f2,#efd1dc,#85d0f2,#937cb5);
-      box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
-      padding: 25px;
-      border-radius: 25px;
-      height: 400px;
-      transition: all .3s;
+     .blog-slider {
+       z-index: 1000;
+       width: 95%;
+       position: relative;
+       max-width: 800px;
+       margin: auto;
+       background: linear-gradient(135deg,#85d0f2,#efd1dc,#85d0f2,#937cb5);
+       box-shadow: 0 14px 80px rgba(34, 35, 58, 0.2);
+       padding: 25px;
+       border: 3px solid rgba(239, 209, 220);
+       border-radius: 20px;
+       height: 400px;
+       transition: all .3s;
     }
 
-    section .image {
-      margin-top: 0;
-      margin-left: -60px;
+     .image {
+       margin-top: 0;
+       margin-left: -60px;
+       overflow: hidden;
     }
 
-    section .image img {
-      width: 96%; height: 96%;
-      border: 4px solid rgb(147,124,181);
-      border-radius: 20px;
+    .image img {
+       width: 43%; height: 43%;
+       border: 4px solid rgb(147,124,181);
+       border-radius: 20px;
+       object-fit: cover;
+       display: block;
     }
 
-    section .content {
-      transform: translateX(25px);
+    .content {
+      transform: translate(340px, -385px);
     }
 
-    section .content span {
+    .content span {
       font-size: 16px;
+    }
+
+    .swiper {
+      width: 25%;
+      height: 25%;
+      transform: translate(173px, -350px);
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: linear-gradient(135deg, #68ccf7 0%, #e39fc8 74%);
+      border-radius: 20px;
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-box;
+      display: -moz-inline-block;
+      vertical-align: middle;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      width: 80%;
+      height: 50%;
+      /*border: 3px solid gray;*/
+      /*border-radius: 20px;*/
+      object-fit: cover;
+    }
+
+    .swiper-slide .button {
+
+    }
+
+    .swiper {
+      width: 60%;
+      height: 62%;
+      margin: -20px auto;
+    }
+
+    .price-mic {
+      line-height: 50px;
+      color: #1e88e5;
+      font-size: 30px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+    }
+
+    .price-mic .once {
+      font-size: 15px
+    }
+
+    .outline {
+      color: white;
+      text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     }
 
     @keyframes animate {
@@ -248,9 +317,8 @@
 
       .blog-slider {
         flex-direction: column;
-        width: 50%;
+        height: auto; width: auto;
         min-height: 500px;
-        height: auto;
         margin: 180px auto;
       }
 
@@ -274,6 +342,7 @@
   </style>
   <script src='/index.js'></script>
   <script src="https://kit.fontawesome.com/589564cef6.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
 <x-include include="/includes/header.html"></x-include>
@@ -313,6 +382,35 @@
           điều ước, cô đại diện cho sự Cuốn hút (Charm).
         </span>
       </div>
+      <div #swiperRef="" class="swiper micSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="/assets/ionicons/mic-circle-outline.svg" alt="">
+            <span class="outline">Mic #1</span><br>
+            <span class="price-mic">$8000<span class="once"> /mic</span></span>
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/ionicons/mic-circle-outline.svg" alt="">
+            <span class="outline">Mic #2</span><br>
+            <span class="price-mic">$8000<span class="once"> /mic</span></span>
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/ionicons/mic-circle-outline.svg" alt="">
+            <span class="outline">Mic #3</span><br>
+            <span class="price-mic">$8000<span class="once"> /mic</span></span>
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/ionicons/mic-circle-outline.svg" alt="">
+            <span class="outline">Mic #4</span><br>
+            <span class="price-mic">$8000<span class="once"> /mic</span></span>
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/ionicons/mic-circle-outline.svg" alt="">
+            <span class="outline">Mic #5</span><br>
+            <span class="price-mic">$8000<span class="once"> /mic</span></span>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="container">
       <a href="#" class="toggleBox">
@@ -334,6 +432,23 @@
   toggleClick.addEventListener('click', () => {
     toggleClick.classList.toggle('active')
     container.classList.toggle('active')
+  });
+</script>
+<script>
+  var swiper = new Swiper(".micSwiper", {
+    slidesPerView: 3,
+    initialSlide: 1,
+    centeredSlides: true,
+    loop: true,
+    spaceBetween: 20,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
+    }
   });
 </script>
 </body>

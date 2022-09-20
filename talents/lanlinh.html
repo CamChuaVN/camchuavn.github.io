@@ -76,6 +76,8 @@
     .navigation ul li {
       list-style: none;
       margin: 0 17px;
+      border-radius: 50%;
+      border: 3px solid rgba(2255, 0, 15, .2);
     }
 
     .navigation ul li a {
@@ -351,10 +353,12 @@
     }
     .blog-slider__pagination.swiper-pagination-bullets .swiper-pagination-bullet {
       margin: 8px 0;
+      border: 3px solid rgba(0, 0, 0, .1);
     }
     @media screen and (max-width: 768px) {
       .blog-slider__pagination.swiper-pagination-bullets .swiper-pagination-bullet {
         margin: 0 5px;
+        border: 3px solid rgba(0, 0, 0, .1);
       }
     }
     .blog-slider__pagination .swiper-pagination-bullet {
@@ -405,7 +409,7 @@
     <span>loading</span>
   </div>
 </div><!-- end preloader -->
-<div class="back">
+<div class="background">
   <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
     <defs>
       <radialGradient id="Gradient1" cx="50%" cy="50%" fx="10%" fy="50%" r=".5">
@@ -445,7 +449,6 @@
   <div class="blog-slider__wrp swiper-wrapper">
     <div class="blog-slider__item swiper-slide">
       <div class="blog-slider__img">
-
         <img src="/assets/avatar/lanlinh.jpg" alt="">
       </div>
       <div class="blog-slider__content">
