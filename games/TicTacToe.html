@@ -6,12 +6,12 @@
   <title>Tic Tac Toe (Lan Linh Edition)</title>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
 
-  <meta property="og:image" content="/assets/avatar/banmai.jpg">
-  <meta property="og:image:alt" content="Akatsuki Ban Mai">
+  <meta property="og:image" content="/assets/avatar/lanlinh.jpg">
+  <meta property="og:image:alt" content="Nika Lan Linh">
   <meta property="og:site_name" content="Nijigen Vtuber Project">
   <meta property="og:type" content="object">
-  <meta property="og:title" content="Akatsuki Ban Mai | Nijigen Vtuber Project">
-  <meta property="og:url" content="/talents/banmai.html">
+  <meta property="og:title" content="Tic Tac Toe | Nijigen Vtuber Project">
+  <meta property="og:url" content="/games/tictactoe.html">
   <meta property="og:description" content="What?">
 
   <link rel='icon' type='image/svg+xml' href='/assets/logo.svg' size='any'>
@@ -116,27 +116,8 @@
     }
 
   </style>
-  <script src='/index.js'></script>
-  <script src="https://kit.fontawesome.com/589564cef6.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <x-include include="/includes/header.html"></x-include>
-  <div class="preloader" id="preloader"><!-- start preloader -->
-    <div class="preloader-container">
-      <svg version="1.1" id="L5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve">
-                  <circle fill="#675cda" stroke="none" cx="6" cy="50" r="6">
-                      <animateTransform attributeName="transform" dur="1s" type="translate" values="0 15 ; 0 -15; 0 15" repeatCount="indefinite" begin="0.1" />
-                  </circle>
-        <circle fill="#675cda" stroke="none" cx="30" cy="50" r="6">
-                      <animateTransform attributeName="transform" dur="1s" type="translate" values="0 10 ; 0 -10; 0 10" repeatCount="indefinite" begin="0.2" />
-                  </circle>
-        <circle fill="#675cda" stroke="none" cx="54" cy="50" r="6">
-                      <animateTransform attributeName="transform" dur="1s" type="translate" values="0 5 ; 0 -5; 0 5" repeatCount="indefinite" begin="0.3" />
-                  </circle>
-              </svg>
-      <span>loading</span>
-    </div>
-  </div><!-- end preloader -->
   <div class="container">
     <h1>Tic Tac Toe<br>(Lan Linh Edition)</h1>
     <!-- Game Messages -->
@@ -162,7 +143,6 @@
 
     <button id="reset-game">Reset Game</button>
   </div>
-  <x-include include="/includes/footer.html"></x-include>
   <script>
     (function Game() {
       // Elements
