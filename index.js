@@ -11,6 +11,13 @@ window.customElements.define("x-include", class Include extends HTMLElement {
     }
 
     console.log(this.innerHTML = await fetchInfo.text());
+
+    var scripts = this.getElementsByTagName('script');
+    for(var i = 0; i < scripts.length; i++) {
+        var script = document.createElement('script');
+        script.innerHTML = scripts[i].innerHTML;
+        scripts[i].parentNode.replaceChild(script, scripts[i]);
+    }
   }
 });
 
