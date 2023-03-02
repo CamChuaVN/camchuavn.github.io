@@ -10,9 +10,7 @@ window.customElements.define("x-include", class Include extends HTMLElement {
       return;
     }
     
-    console.log(this.innerHTML = await fetchInfo.text()
-                .replace('$year', new Date().getFullYear())
-    );
+    console.log(this.innerHTML = await fetchInfo.text());
   }
 });
 
