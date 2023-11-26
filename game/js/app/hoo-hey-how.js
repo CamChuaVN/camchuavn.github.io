@@ -1,4 +1,4 @@
-const socket = new WebSocket('ws://localhost:8080');
+const socket = new WebSocket('ws://0.tcp.ap.ngrok.io:18008');
 
 socket.addEventListener('open', (event) => {
     sendMessage('token ' + getCookie('token'));
