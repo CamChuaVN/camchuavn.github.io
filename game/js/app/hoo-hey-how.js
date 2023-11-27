@@ -134,7 +134,7 @@ function displayResult(result, receiveMoney) {
     setTimeout(() => {
         PlateLid.classList.add("shake");
         IMG.forEach(function(item, index) {
-            item.src = '/assets/images/hoo-hey-how/' + iconList[result[index] - 1];
+            item.src = 'https://assets.camchua.moe/game/images/hoo-hey-how/' + iconList[result[index] - 1];
         });
         setTimeout (() => {
             PlateLid.classList.remove("shake");
@@ -145,7 +145,7 @@ function displayResult(result, receiveMoney) {
             setTimeout (() => {
                 PlateLidPlace.style.display = "none";
                 IMG.forEach(function(item, index) {
-                    item.src = '/assets/images/hoo-hey-how/nothing.png';
+                    item.src = 'https://assets.camchua.moe/game/images/hoo-hey-how/nothing.png';
                 });
                 if(receiveMoney != 0 && receiveMoney != -1) swal(language[receiveMoney > 0 ? 'successLabel' : 'failedLabel'], language['game_HooHeyHow_Betting_' + (receiveMoney > 0 ? 'Win' : 'Lose')].replace('<amount>', (Math.abs(receiveMoney) / 1000) + 'k'),  receiveMoney > 0 ? 'success' : 'error');
             }, 2000);
