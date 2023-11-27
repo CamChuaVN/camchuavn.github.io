@@ -77,6 +77,7 @@ document.getElementById('deerBet').addEventListener('click', function() {
 
     let placeBet = document.getElementById('placeBet');
     placeBet.style.display = 'flex';
+    document.getElementById("placeBet").scrollIntoView();
 });
 document.getElementById('gourdBet').addEventListener('click', function() {
     chosenType = 2;
@@ -85,6 +86,7 @@ document.getElementById('gourdBet').addEventListener('click', function() {
 
     let placeBet = document.getElementById('placeBet');
     placeBet.style.display = 'flex';
+    document.getElementById("placeBet").scrollIntoView();
 });
 document.getElementById('chickenBet').addEventListener('click', function() {
     chosenType = 3;
@@ -93,6 +95,7 @@ document.getElementById('chickenBet').addEventListener('click', function() {
 
     let placeBet = document.getElementById('placeBet');
     placeBet.style.display = 'flex';
+    document.getElementById("placeBet").scrollIntoView();
 });
 document.getElementById('fishBet').addEventListener('click', function() {
     chosenType = 4;
@@ -101,6 +104,7 @@ document.getElementById('fishBet').addEventListener('click', function() {
 
     let placeBet = document.getElementById('placeBet');
     placeBet.style.display = 'flex';
+    document.getElementById("placeBet").scrollIntoView();
 });
 document.getElementById('crabBet').addEventListener('click', function() {
     chosenType = 5;
@@ -109,6 +113,7 @@ document.getElementById('crabBet').addEventListener('click', function() {
 
     let placeBet = document.getElementById('placeBet');
     placeBet.style.display = 'flex';
+    document.getElementById("placeBet").scrollIntoView();
 });
 document.getElementById('shrimpBet').addEventListener('click', function() {
     chosenType = 6;
@@ -117,6 +122,7 @@ document.getElementById('shrimpBet').addEventListener('click', function() {
 
     let placeBet = document.getElementById('placeBet');
     placeBet.style.display = 'flex';
+    document.getElementById("placeBet").scrollIntoView();
 });
 
 
